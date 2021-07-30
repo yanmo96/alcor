@@ -21,7 +21,7 @@ data:
     microservices.dataplane.service.url=http://dataplanemanager-service.default.svc.cluster.local:30010/network-configuration
     microservices.dataplane.nodeservice.url=http://dataplanemanager-service.default.svc.cluster.local:30010/nodes
 
-    opentracing.jaeger.udp-sender.host=jaeger-agent
+    opentracing.jaeger.udp-sender.host=JAEGER_AGENT_HOST
     opentracing.jaeger.udp-sender.port=6831
     opentracing.jaeger.const-sampler.decision=true
     opentracing.jaeger.enabled=true
@@ -68,6 +68,11 @@ spec:
           envFrom:
             - configMapRef:
                 name: node-configmap
+          env:
+            - name: JAEGER_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
 ---
 apiVersion: v1
 kind: Service
