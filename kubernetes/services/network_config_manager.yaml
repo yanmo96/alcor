@@ -76,11 +76,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: ncm-configmap
-          env:
-            - name: JAEGER_AGENT_HOST
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.hostIP
+
 ---
 apiVersion: v1
 kind: Service

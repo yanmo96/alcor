@@ -67,11 +67,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: subnet-configmap
-          env:
-            - name: JAEGER_AGENT_HOST
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.hostIP
+
 ---
 apiVersion: v1
 kind: Service
