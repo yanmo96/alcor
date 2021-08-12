@@ -13,11 +13,13 @@ data:
     logging.type=file
     apache.kafka.address=172.17.0.1:9092
     microservices.route.service.url=http://routemanager-service.default.svc.cluster.local:9003/
-    microservices.subnet.service.url=http://subnetmanager-service.default.svc.cluster.local:9002
+    microservices.subnet.service.url=http://subnetmanager-service.default.svc.cluster.local:9002/
+    microservices.gateway.service.url=http://gatewaymanager-service.default.svc.cluster.local:9015/
+    management.health.redis.enabled=false    
     
     rbac.policy.type=Enforced
 
-    opentracing.jaeger.udp-sender.host=localhost
+    opentracing.jaeger.udp-sender.host=10.111.132.59
     opentracing.jaeger.udp-sender.port=6831
     opentracing.jaeger.const-sampler.decision=true
     opentracing.jaeger.enabled=true
