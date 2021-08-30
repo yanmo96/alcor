@@ -5,10 +5,6 @@
             <property name="cacheConfiguration">
                 <list>
                     <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                        <property name="name" value="com.futurewei.alcor.web.entity.vpc.VpcEntity"/>
-                        <property name="atomicityMode" value="TRANSACTIONAL"/>
-                    </bean>
-                    <bean class="org.apache.ignite.configuration.CacheConfiguration">
                         <property name="name" value="dpm_nodeinfo_cache"/>
                         <property name="atomicityMode" value="TRANSACTIONAL"/>
                     </bean>
@@ -34,14 +30,6 @@
                     </bean>
                     <bean class="org.apache.ignite.configuration.CacheConfiguration">
                         <property name="name" value="com.futurewei.alcor.netwconfigmanager.entity.ResourceMeta"/>
-                        <property name="atomicityMode" value="TRANSACTIONAL"/>
-                    </bean>
-                    <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                        <property name="name" value="com.futurewei.alcor.netwconfigmanager.entity.VpcResourceMeta"/>
-                        <property name="atomicityMode" value="TRANSACTIONAL"/>
-                    </bean>
-                    <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                        <property name="name" value="com.futurewei.alcor.dataplane.entity.VpcResourceMeta"/>
                         <property name="atomicityMode" value="TRANSACTIONAL"/>
                     </bean>
                 </list>
