@@ -27,7 +27,7 @@ Copyright(c) 2020 Futurewei Cloud
       <property name="peerClassLoadingEnabled" value="true" />
 
       <!-- Enabling Apache Ignite Persistent Store. -->
-      <property name="dataStorageConfiguration">
+<!--       <property name="dataStorageConfiguration">
          <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
             <property name="defaultDataRegionConfiguration">
                <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
@@ -36,7 +36,7 @@ Copyright(c) 2020 Futurewei Cloud
             </property>
             <property name="storagePath" value="/opt/ncm"/>
          </bean>
-      </property>
+      </property> -->
 
       <property name="cacheConfiguration">
          <list>
